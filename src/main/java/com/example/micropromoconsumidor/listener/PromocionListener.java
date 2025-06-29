@@ -50,7 +50,8 @@ public class PromocionListener {
 
 
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
-            String nombreArchivo = "promocion_" + promocion.getId() + "_" + timestamp + "_" + UUID.randomUUID() + ".json";
+            String nombreArchivo = "promocion_" + timestamp + "_" + UUID.randomUUID() + ".json";
+
 
             File carpeta = Paths.get("archivos_promos").toFile();
             if (!carpeta.exists()) carpeta.mkdirs();
