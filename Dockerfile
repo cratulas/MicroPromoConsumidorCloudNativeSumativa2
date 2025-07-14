@@ -11,6 +11,6 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 COPY src/main/resources/Wallet_BDFullStack3 /app/wallet
 
-EXPOSE 808
+EXPOSE 8086
 
 ENTRYPOINT ["sh", "-c", "java -Dspring.profiles.active=docker $JAVA_OPTS -jar app.jar"]
